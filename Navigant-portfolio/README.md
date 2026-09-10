@@ -12,5 +12,6 @@ The workspace is purposefully separated from backend data storage repositories t
 ## 🚀 Live Deployment
 The frontend assets are linked to automated hosting workflows:
 *   **Production Deployment:** Managed via Netlify with active secure SSL/HTTPS encryption.
-*   **Live Application Entry:** [View My Live Portfolio Workspace](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
+*   **Live Application Entry:** [View My Live Portfolio Workspace](https://syeda-munazza-bukhari-portfolio.netlify.app/)
+
 *   **Interactive Build Log:** [Read the Live Engineering Story](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
