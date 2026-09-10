@@ -1,0 +1,19 @@
+# Local Environment Secrets
+.env
+*.env.local
+
+# Operating System Files
+Thumbs.db
+.DS_Store
+ehthumbs.db
+desktop.ini
+
+# Common Caches & Node Logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+
+# Docker Runtime temporary files
+.docker/
