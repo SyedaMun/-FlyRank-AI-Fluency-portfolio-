@@ -42,7 +42,7 @@ This repository functions as empirical proof of my capability to handle technica
 ---
 ### 👤 Contact & Connect
 * **Portfolio:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
-* **GitHub:** [@your-username](https://github.com)
+* **GitHub:** https://github.com/SyedaMun
 
 With regards,  
 **Syeda Munazza Bukhari**  
