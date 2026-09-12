@@ -38,3 +38,12 @@ This repository functions as empirical proof of my capability to handle technica
 
 ---
 *Verified Deployment Stack: Docker Compose, Semantic Web Engines, Netlify CDN infrastructure, and Google Gemini API matrices.*
+
+---
+### 👤 Contact & Connect
+* **Portfolio:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
+* **GitHub:** [@your-username](https://github.com)
+
+With regards,  
+**Syeda Munazza Bukhari**  
+*Backend & AI Engineer*
