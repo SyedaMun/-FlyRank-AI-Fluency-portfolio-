@@ -1,0 +1,3947 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Syeda Munazza Bukhari — Backend AI Engineering portfolio. Backend APIs, AI workflows, automation, agent design, MCP, databases, Docker and documented engineering projects.">
+
+    <meta name="author" content="Syeda Munazza Bukhari">
+
+    <title>Syeda Munazza Bukhari | Backend AI Engineering Portfolio</title>
+
+    <style>
+
+        :root {
+            --bg: #070a0f;
+            --bg-soft: #0c1118;
+            --card: #101720;
+            --card-hover: #141e29;
+
+            --text: #f5f7fa;
+            --muted: #9ba7b4;
+            --muted-light: #c6ced7;
+
+            --accent: #63f5c5;
+            --accent-dark: #27c99b;
+            --accent-soft: rgba(99, 245, 197, 0.09);
+
+            --blue: #79a8ff;
+            --blue-soft: rgba(121, 168, 255, 0.09);
+
+            --border: rgba(255,255,255,0.09);
+            --border-strong: rgba(255,255,255,0.15);
+
+            --max-width: 1180px;
+
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+
+            --shadow:
+                0 20px 60px rgba(0,0,0,0.35);
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    circle at 80% 0%,
+                    rgba(99,245,197,0.08),
+                    transparent 32%
+                ),
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(121,168,255,0.06),
+                    transparent 28%
+                ),
+                var(--bg);
+
+            color: var(--text);
+
+            font-family:
+                Inter,
+                ui-sans-serif,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(var(--max-width), calc(100% - 40px));
+            margin: auto;
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            backdrop-filter: blur(18px);
+
+            background: rgba(7,10,15,0.82);
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .nav-inner {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 24px;
+        }
+
+        .brand {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            white-space: nowrap;
+        }
+
+        .brand span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--muted-light);
+            font-size: 0.9rem;
+            transition: 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            padding: 105px 0 90px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            color: var(--accent);
+
+            font-size: 0.8rem;
+            font-weight: 800;
+
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+
+            margin-bottom: 22px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 18px var(--accent);
+        }
+
+        h1 {
+            font-size: clamp(2.8rem, 7vw, 5.7rem);
+            line-height: 0.98;
+
+            letter-spacing: -0.065em;
+
+            margin: 0 0 25px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-lead {
+            max-width: 750px;
+
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+
+            color: var(--muted-light);
+
+            margin-bottom: 34px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+
+            min-height: 46px;
+
+            padding: 0.72rem 1.1rem;
+
+            border-radius: 10px;
+
+            border: 1px solid var(--border-strong);
+
+            font-size: 0.9rem;
+            font-weight: 750;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #07110d;
+            border-color: var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-dark);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.03);
+        }
+
+        .hero-proof {
+            padding: 28px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(99,245,197,0.08),
+                    rgba(121,168,255,0.04)
+                );
+
+            border:
+                1px solid var(--border-strong);
+
+            border-radius: var(--radius-lg);
+
+            box-shadow: var(--shadow);
+        }
+
+        .proof-label {
+            color: var(--accent);
+
+            font-size: 0.75rem;
+            font-weight: 800;
+
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .hero-proof p {
+            color: var(--muted-light);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            align-items: end;
+
+            margin-bottom: 45px;
+        }
+
+        .section-number {
+            color: var(--accent);
+
+            font-family: monospace;
+
+            font-size: 0.8rem;
+            font-weight: 800;
+
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3.2rem);
+
+            letter-spacing: -0.045em;
+
+            line-height: 1.05;
+
+            margin: 0;
+        }
+
+        .section-description {
+            max-width: 560px;
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           ENGINEERING PILLARS
+        ========================================================= */
+
+        .pillars {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .pillar {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: var(--radius-md);
+
+            padding: 28px;
+
+            transition: 0.25s ease;
+        }
+
+        .pillar:hover {
+            transform: translateY(-5px);
+            background: var(--card-hover);
+            border-color: var(--border-strong);
+        }
+
+        .pillar-number {
+            color: var(--accent);
+
+            font-family: monospace;
+            font-weight: 800;
+
+            margin-bottom: 20px;
+        }
+
+        .pillar h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+
+        .pillar p {
+            color: var(--muted);
+            margin: 0;
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .project-card {
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            padding: 34px;
+
+            display: flex;
+            flex-direction: column;
+
+            min-height: 390px;
+
+            transition: 0.25s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-strong);
+            background: var(--card-hover);
+        }
+
+        .project-card.featured {
+            grid-column: 1 / -1;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(99,245,197,0.07),
+                    rgba(121,168,255,0.035)
+                );
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+
+            color: var(--muted);
+
+            font-size: 0.78rem;
+
+            font-family: monospace;
+
+            margin-bottom: 28px;
+        }
+
+        .project-card h3 {
+            font-size: 1.65rem;
+            letter-spacing: -0.035em;
+            margin: 0 0 14px;
+        }
+
+        .project-card p {
+            color: var(--muted-light);
+        }
+
+        .project-list {
+            padding-left: 18px;
+            color: var(--muted);
+        }
+
+        .project-list li {
+            margin-bottom: 7px;
+        }
+
+        .project-bottom {
+            margin-top: auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 20px;
+
+            padding-top: 25px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+        .chip {
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255,255,255,0.025);
+
+            padding:
+                4px 9px;
+
+            border-radius: 6px;
+
+            font-size: 0.73rem;
+
+            color: var(--muted-light);
+        }
+
+        /* =========================================================
+           CASE STUDY
+        ========================================================= */
+
+        .case-study {
+            background: var(--bg-soft);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            overflow: hidden;
+        }
+
+        .case-header {
+            padding: 42px;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .case-header h3 {
+            font-size: 2rem;
+            margin: 0 0 10px;
+        }
+
+        .case-header p {
+            max-width: 780px;
+            color: var(--muted-light);
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .case-block {
+            padding: 32px;
+
+            border-right:
+                1px solid var(--border);
+        }
+
+        .case-block:last-child {
+            border-right: 0;
+        }
+
+        .case-block strong {
+            display: block;
+
+            color: var(--accent);
+
+            font-size: 0.75rem;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            margin-bottom: 13px;
+        }
+
+        .case-block p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
+        /* =========================================================
+           ARCHITECTURE
+        ========================================================= */
+
+        .architecture {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .architecture-copy p {
+            color: var(--muted-light);
+        }
+
+        .architecture-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .flow-node {
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            padding: 17px 20px;
+
+            border-radius: 10px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flow-node span {
+            color: var(--muted);
+            font-family: monospace;
+            font-size: 0.75rem;
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: var(--accent);
+            font-family: monospace;
+        }
+
+        /* =========================================================
+           AI FLUENCY JOURNEY
+        ========================================================= */
+
+        .journey {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .journey-step {
+            min-height: 155px;
+
+            padding: 18px;
+
+            border:
+                1px solid var(--border);
+
+            background: var(--card);
+
+            border-radius: 12px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .journey-step .code {
+            color: var(--accent);
+
+            font-family: monospace;
+
+            font-size: 0.78rem;
+            font-weight: 800;
+        }
+
+        .journey-step strong {
+            font-size: 0.85rem;
+            line-height: 1.3;
+        }
+
+        .journey-step small {
+            color: var(--muted);
+            font-size: 0.7rem;
+        }
+
+        /* =========================================================
+           NEW — SKILLS & TECHNICAL FOCUS
+        ========================================================= */
+
+        .skills-layout {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .skills-panel {
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: var(--radius-lg);
+
+            padding: 32px;
+        }
+
+        .skills-panel h3 {
+            margin: 0 0 8px;
+
+            font-size: 1.35rem;
+
+            letter-spacing: -0.025em;
+        }
+
+        .skills-panel-description {
+            color: var(--muted);
+
+            font-size: 0.9rem;
+
+            margin-bottom: 24px;
+        }
+
+        .skills-group {
+            margin-bottom: 24px;
+        }
+
+        .skills-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skills-group-title {
+            color: var(--accent);
+
+            font-size: 0.72rem;
+
+            font-family: monospace;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            margin-bottom: 10px;
+        }
+
+        .skills-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill {
+            padding: 7px 11px;
+
+            border:
+                1px solid var(--border);
+
+            background:
+                rgba(255,255,255,0.025);
+
+            color: var(--muted-light);
+
+            border-radius: 8px;
+
+            font-size: 0.78rem;
+
+            transition: 0.2s ease;
+        }
+
+        .skill:hover {
+            border-color: var(--accent);
+
+            color: var(--accent);
+
+            transform: translateY(-2px);
+        }
+
+        .skill.primary {
+            color: var(--accent);
+
+            border-color:
+                rgba(99,245,197,0.2);
+
+            background:
+                var(--accent-soft);
+        }
+
+        .skill.secondary {
+            color: var(--blue);
+
+            border-color:
+                rgba(121,168,255,0.2);
+
+            background:
+                var(--blue-soft);
+        }
+
+        /* =========================================================
+           NEW — CERTIFICATIONS
+        ========================================================= */
+
+        .certification-intro {
+            max-width: 850px;
+
+            color: var(--muted-light);
+
+            margin-bottom: 32px;
+        }
+
+        .certification-summary {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+
+            margin-bottom: 35px;
+        }
+
+        .cert-stat {
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 14px 18px;
+        }
+
+        .cert-stat strong {
+            color: var(--accent);
+
+            font-size: 1.2rem;
+
+            display: block;
+        }
+
+        .cert-stat span {
+            color: var(--muted);
+
+            font-size: 0.72rem;
+        }
+
+        .certification-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 14px;
+        }
+
+        .cert-card {
+            background: var(--card);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            padding: 22px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            transition: 0.25s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-4px);
+
+            background: var(--card-hover);
+
+            border-color:
+                var(--border-strong);
+        }
+
+        .cert-top {
+            display: flex;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            align-items: flex-start;
+
+            margin-bottom: 14px;
+        }
+
+        .cert-level {
+            color: var(--accent);
+
+            font-family: monospace;
+
+            font-size: 0.67rem;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: 0.08em;
+
+            padding: 5px 8px;
+
+            border:
+                1px solid
+                rgba(99,245,197,0.2);
+
+            background:
+                var(--accent-soft);
+
+            border-radius: 6px;
+
+            white-space: nowrap;
+        }
+
+        .cert-number {
+            color: var(--muted);
+
+            font-family: monospace;
+
+            font-size: 0.7rem;
+        }
+
+        .cert-card h3 {
+            font-size: 1rem;
+
+            margin: 0 0 8px;
+
+            line-height: 1.35;
+        }
+
+        .cert-card p {
+            color: var(--muted);
+
+            font-size: 0.82rem;
+
+            margin: 0 0 18px;
+        }
+
+        .cert-link {
+            margin-top: auto;
+
+            color: var(--accent);
+
+            font-size: 0.76rem;
+
+            font-weight: 750;
+        }
+
+        .cert-link:hover {
+            text-decoration: underline;
+        }
+
+        .cert-group-heading {
+            grid-column: 1 / -1;
+
+            margin-top: 25px;
+
+            padding:
+                15px 0 5px;
+
+            border-bottom:
+                1px solid var(--border);
+
+            color: var(--muted-light);
+
+            font-size: 0.9rem;
+
+            font-weight: 750;
+        }
+
+        /* =========================================================
+           CAPSTONE
+        ========================================================= */
+
+        .capstone {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(99,245,197,0.09),
+                    rgba(121,168,255,0.05)
+                );
+
+            border:
+                1px solid rgba(99,245,197,0.18);
+
+            border-radius: var(--radius-lg);
+
+            padding: 48px;
+
+            overflow: hidden;
+        }
+
+        .capstone::after {
+            content: "WEEK 6";
+
+            position: absolute;
+
+            right: -20px;
+            top: 15px;
+
+            font-size: 7rem;
+
+            font-weight: 900;
+
+            color: rgba(255,255,255,0.025);
+
+            pointer-events: none;
+        }
+
+        .capstone h3 {
+            font-size: 2.4rem;
+
+            letter-spacing: -0.04em;
+
+            margin: 0 0 15px;
+        }
+
+        .capstone-intro {
+            max-width: 780px;
+            color: var(--muted-light);
+        }
+
+        .capstone-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+
+            margin-top: 35px;
+        }
+
+        .capstone-item {
+            background:
+                rgba(0,0,0,0.18);
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 12px;
+
+            padding: 22px;
+        }
+
+        .capstone-item strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: var(--accent);
+        }
+
+        .capstone-item p {
+            margin: 0;
+
+            color: var(--muted);
+
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .about-copy p {
+            color: var(--muted-light);
+        }
+
+        .about-highlight {
+            border-left:
+                2px solid var(--accent);
+
+            padding-left: 22px;
+
+            color: var(--muted-light);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .timeline-item {
+            padding:
+                0 0 25px 25px;
+
+            border-left:
+                1px solid var(--border);
+
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -5px;
+            top: 4px;
+
+            width: 9px;
+            height: 9px;
+
+            border-radius: 50%;
+
+            background: var(--accent);
+        }
+
+        .timeline-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item span {
+            color: var(--muted);
+            font-size: 0.85rem;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            text-align: center;
+
+            padding:
+                105px 20px;
+        }
+
+        .contact h2 {
+            max-width: 850px;
+            margin: 0 auto 18px;
+        }
+
+        .contact p {
+            max-width: 650px;
+            margin: 0 auto 30px;
+
+            color: var(--muted-light);
+        }
+
+        .contact-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            border-top:
+                1px solid var(--border);
+
+            padding:
+                38px 0;
+        }
+
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+
+            align-items: center;
+        }
+
+        .footer-copy {
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--muted-light);
+            font-size: 0.82rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .badge-placeholder {
+            display: inline-flex;
+
+            align-items: center;
+
+            border:
+                1px dashed var(--border-strong);
+
+            border-radius: 8px;
+
+            padding:
+                7px 10px;
+
+            color: var(--muted);
+
+            font-size: 0.75rem;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 1000px) {
+
+            .journey {
+                grid-template-columns:
+                    repeat(4, 1fr);
+            }
+
+            .skills-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .certification-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .hero-grid,
+            .architecture,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card.featured {
+                grid-column: auto;
+            }
+
+            .case-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .case-block:nth-child(2) {
+                border-right: 0;
+            }
+
+            .case-block:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .capstone-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: min(
+                    var(--max-width),
+                    calc(100% - 26px)
+                );
+            }
+
+            .nav-inner {
+                min-height: 62px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding-top: 75px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-heading {
+                display: block;
+            }
+
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-block {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .case-block:last-child {
+                border-bottom: 0;
+            }
+
+            .journey {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .capstone {
+                padding: 30px 22px;
+            }
+
+            .footer-grid {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="site-nav">
+
+    <div class="container nav-inner">
+
+        <a href="#home" class="brand">
+            M. Bukhari<span>.</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#work">Work</a>
+
+            <a href="#case-studies">
+                Case Studies
+            </a>
+
+            <a href="#ai-systems">
+                AI Systems
+            </a>
+
+            <a href="#skills">
+                Skills
+            </a>
+
+            <a href="#certifications">
+                Certifications
+            </a>
+
+            <a href="#capstone">
+                Capstone
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header id="home" class="hero">
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                Backend AI Engineering
+            </div>
+
+            <h1>
+                Syeda Munazza<br>
+                <span>Bukhari.</span>
+            </h1>
+
+            <p class="hero-lead">
+
+                I build backend APIs that transform
+                unstructured user requests into structured,
+                validated data that AI applications can
+                process reliably.
+
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    href="#work"
+                    class="btn btn-primary"
+                >
+                    View Engineering Work →
+                </a>
+
+                <a
+                    href="https://github.com/SyedaMun/flyrank-crud-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/in/m-bukhari-pro"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary"
+                >
+                    LinkedIn ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <aside class="hero-proof">
+
+            <div class="proof-label">
+                What I am proving
+            </div>
+
+            <p>
+
+                I am building toward backend engineering
+                roles where reliable APIs, structured data,
+                AI systems and documented engineering
+                decisions meet.
+
+            </p>
+
+            <p>
+
+                My portfolio focuses on real implementations,
+                technical troubleshooting, validation,
+                automation and continuous improvement.
+
+            </p>
+
+        </aside>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     ENGINEERING APPROACH
+========================================================= -->
+
+<section id="work">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    01 / ENGINEERING APPROACH
+                </div>
+
+                <h2>
+                    From messy input<br>
+                    to reliable systems.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                My work combines backend engineering with
+                practical AI systems. The emphasis is not
+                only on making something work, but
+                understanding why it works and what happens
+                when it breaks.
+
+            </p>
+
+        </div>
+
+
+        <div class="pillars">
+
+            <article class="pillar">
+
+                <div class="pillar-number">
+                    01
+                </div>
+
+                <h3>
+                    Backend Foundations
+                </h3>
+
+                <p>
+
+                    REST APIs, CRUD operations,
+                    request/response handling, databases,
+                    PostgreSQL, authentication, Docker
+                    and API testing.
+
+                </p>
+
+            </article>
+
+
+            <article class="pillar">
+
+                <div class="pillar-number">
+                    02
+                </div>
+
+                <h3>
+                    AI Systems
+                </h3>
+
+                <p>
+
+                    AI workflows, LLM integration,
+                    automation, structured data processing,
+                    agent concepts, tool use and MCP.
+
+                </p>
+
+            </article>
+
+
+            <article class="pillar">
+
+                <div class="pillar-number">
+                    03
+                </div>
+
+                <h3>
+                    Engineering Reasoning
+                </h3>
+
+                <p>
+
+                    Validation, debugging, evaluation cases,
+                    guardrails, architectural decisions,
+                    evidence and documented lessons learned.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SELECTED WORK
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    02 / SELECTED WORK
+                </div>
+
+                <h2>
+                    Projects that show the progression.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                The projects below represent the progression
+                from backend fundamentals to AI-powered
+                systems and agent architecture.
+
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- BACKEND PROJECT -->
+
+            <article class="project-card featured">
+
+                <div class="project-meta">
+
+                    <span>
+                        BACKEND ENGINEERING
+                    </span>
+
+                    <span>
+                        FLYRANK · BE SERIES
+                    </span>
+
+                </div>
+
+                <h3>
+                    FlyRank Backend API
+                </h3>
+
+                <p>
+
+                    A continuously evolving backend engineering
+                    project covering API development, database
+                    integration, containerization and
+                    authentication.
+
+                </p>
+
+                <ul class="project-list">
+
+                    <li>
+                        Built a RESTful CRUD API using
+                        Node.js and Express.js.
+                    </li>
+
+                    <li>
+                        Connected the application to persistent
+                        database infrastructure.
+                    </li>
+
+                    <li>
+                        Containerized the application stack
+                        using Docker and PostgreSQL.
+                    </li>
+
+                    <li>
+                        Extended the system with authentication
+                        and protected routes.
+                    </li>
+
+                    <li>
+                        Used testing, debugging and architectural
+                        review throughout the progression.
+                    </li>
+
+                </ul>
+
+                <div class="project-bottom">
+
+                    <div class="chips">
+
+                        <span class="chip">
+                            Node.js
+                        </span>
+
+                        <span class="chip">
+                            Express.js
+                        </span>
+
+                        <span class="chip">
+                            REST API
+                        </span>
+
+                        <span class="chip">
+                            PostgreSQL
+                        </span>
+
+                        <span class="chip">
+                            Docker
+                        </span>
+
+                        <span class="chip">
+                            JWT
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="https://github.com/SyedaMun/flyrank-crud-api"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn btn-secondary"
+                    >
+                        View Repository ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- NAVIGANT WORKFLOW -->
+
+            <article class="project-card">
+
+                <div class="project-meta">
+
+                    <span>
+                        AI WORKFLOW
+                    </span>
+
+                    <span>
+                        FL-04
+                    </span>
+
+                </div>
+
+                <h3>
+                    Navigant Education Guidance Workflow
+                </h3>
+
+                <p>
+
+                    An AI-assisted workflow designed around
+                    student information and educational guidance
+                    processes for Navigant Education Consultants.
+
+                </p>
+
+                <ul class="project-list">
+
+                    <li>
+                        Notion student records as structured input.
+                    </li>
+
+                    <li>
+                        n8n used as the workflow orchestration layer.
+                    </li>
+
+                    <li>
+                        Gemini used for AI processing and analysis.
+                    </li>
+
+                    <li>
+                        The workflow was deliberately classified
+                        as a predefined workflow rather than
+                        incorrectly presenting it as a fully
+                        autonomous agent.
+                    </li>
+
+                </ul>
+
+                <div class="project-bottom">
+
+                    <div class="chips">
+
+                        <span class="chip">
+                            n8n
+                        </span>
+
+                        <span class="chip">
+                            Notion
+                        </span>
+
+                        <span class="chip">
+                            Gemini
+                        </span>
+
+                        <span class="chip">
+                            Docker
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#case-studies"
+                        class="btn btn-secondary"
+                    >
+                        View Case Study ↓
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- AGENT -->
+
+            <article class="project-card">
+
+                <div class="project-meta">
+
+                    <span>
+                        AGENT SYSTEM
+                    </span>
+
+                    <span>
+                        FL-06 / FL-07
+                    </span>
+
+                </div>
+
+                <h3>
+                    Navigant Student Guidance Agent
+                </h3>
+
+                <p>
+
+                    An agent architecture designed to move
+                    beyond a fixed workflow toward goal-directed
+                    research, tool use, evaluation and
+                    human-reviewed guidance.
+
+                </p>
+
+                <ul class="project-list">
+
+                    <li>
+                        Defined the agent's job-to-be-done
+                        and system boundaries.
+                    </li>
+
+                    <li>
+                        Designed external tool and data
+                        connections.
+                    </li>
+
+                    <li>
+                        Created pre-build evaluation cases.
+                    </li>
+
+                    <li>
+                        Designed guardrails against
+                        unverified information.
+                    </li>
+
+                    <li>
+                        Preserved human review for consequential
+                        education guidance.
+                    </li>
+
+                </ul>
+
+                <div class="project-bottom">
+
+                    <div class="chips">
+
+                        <span class="chip">
+                            AI Agent
+                        </span>
+
+                        <span class="chip">
+                            n8n
+                        </span>
+
+                        <span class="chip">
+                            Gemini
+                        </span>
+
+                        <span class="chip">
+                            Tools
+                        </span>
+
+                        <span class="chip">
+                            Evals
+                        </span>
+
+                        <span class="chip">
+                            Guardrails
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#capstone"
+                        class="btn btn-secondary"
+                    >
+                        Explore ↓
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CASE STUDY
+========================================================= -->
+
+<section id="case-studies">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    03 / CASE STUDIES
+                </div>
+
+                <h2>
+                    Engineering decisions,<br>
+                    not buzzwords.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                My case-study approach documents the problem,
+                implementation, failure points, fixes,
+                validation and lessons learned.
+
+            </p>
+
+        </div>
+
+
+        <div class="case-study">
+
+            <div class="case-header">
+
+                <div class="section-number">
+                    FEATURED FLAGSHIP
+                </div>
+
+                <h3>
+                    FlyRank Backend API —
+                    Engineering Progression
+                </h3>
+
+                <p>
+
+                    The backend project began with a simple
+                    CRUD API and evolved through database
+                    integration, containerization and
+                    authentication. Each stage provided
+                    a new opportunity to understand how
+                    application layers interact.
+
+                </p>
+
+            </div>
+
+
+            <div class="case-grid">
+
+                <div class="case-block">
+
+                    <strong>
+                        Problem
+                    </strong>
+
+                    <p>
+
+                        Build a backend service capable of
+                        receiving requests, processing data
+                        and returning structured API responses.
+
+                    </p>
+
+                </div>
+
+
+                <div class="case-block">
+
+                    <strong>
+                        Architecture
+                    </strong>
+
+                    <p>
+
+                        Node.js + Express.js formed the API
+                        layer, with database and container
+                        infrastructure introduced as the
+                        project evolved.
+
+                    </p>
+
+                </div>
+
+
+                <div class="case-block">
+
+                    <strong>
+                        What Broke
+                    </strong>
+
+                    <p>
+
+                        The project included real development
+                        problems involving database connectivity,
+                        container startup and infrastructure
+                        configuration.
+
+                    </p>
+
+                </div>
+
+
+                <div class="case-block">
+
+                    <strong>
+                        Lesson
+                    </strong>
+
+                    <p>
+
+                        Reliable backend engineering requires
+                        understanding the interaction between
+                        application code, data infrastructure,
+                        runtime environment and validation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ARCHITECTURE
+========================================================= -->
+
+<section id="ai-systems">
+
+    <div class="container architecture">
+
+        <div class="architecture-copy">
+
+            <div class="section-number">
+                04 / SYSTEM THINKING
+            </div>
+
+            <h2>
+                How I think about
+                AI-enabled backends.
+            </h2>
+
+            <p>
+
+                AI does not replace backend engineering.
+                It depends on reliable systems around it.
+
+            </p>
+
+            <p>
+
+                My learning has focused on the boundary
+                between structured application data, APIs,
+                AI processing, external tools and reliable
+                outputs.
+
+            </p>
+
+        </div>
+
+
+        <div class="architecture-flow">
+
+            <div class="flow-node">
+
+                <strong>
+                    Unstructured User Input
+                </strong>
+
+                <span>
+                    INPUT
+                </span>
+
+            </div>
+
+            <div class="flow-arrow">
+                ↓
+            </div>
+
+            <div class="flow-node">
+
+                <strong>
+                    API / Backend Layer
+                </strong>
+
+                <span>
+                    PROCESS
+                </span>
+
+            </div>
+
+            <div class="flow-arrow">
+                ↓
+            </div>
+
+            <div class="flow-node">
+
+                <strong>
+                    Validation & Structured Data
+                </strong>
+
+                <span>
+                    CONTROL
+                </span>
+
+            </div>
+
+            <div class="flow-arrow">
+                ↓
+            </div>
+
+            <div class="flow-node">
+
+                <strong>
+                    AI Workflow / Agent
+                </strong>
+
+                <span>
+                    REASON
+                </span>
+
+            </div>
+
+            <div class="flow-arrow">
+                ↓
+            </div>
+
+            <div class="flow-node">
+
+                <strong>
+                    Grounded Output + Human Review
+                </strong>
+
+                <span>
+                    RESULT
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     AI FLUENCY JOURNEY
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    05 / AI FLUENCY
+                </div>
+
+                <h2>
+                    Learning → application → systems.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                My AI Fluency work progressed from AI workflow
+                foundations to prompt engineering, workflow
+                architecture, agent concepts, MCP, evaluation,
+                guardrails and agent implementation.
+
+            </p>
+
+        </div>
+
+
+        <div class="journey">
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-01
+                </span>
+
+                <strong>
+                    AI Foundations
+                </strong>
+
+                <small>
+                    Framework & workflow audit
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-02
+                </span>
+
+                <strong>
+                    Portfolio Strategy
+                </strong>
+
+                <small>
+                    Sitemap & pressure testing
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-03
+                </span>
+
+                <strong>
+                    Proof Statement
+                </strong>
+
+                <small>
+                    Professional positioning
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-04
+                </span>
+
+                <strong>
+                    AI Workflow
+                </strong>
+
+                <small>
+                    n8n + Notion + Gemini
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-05
+                </span>
+
+                <strong>
+                    Agents + MCP
+                </strong>
+
+                <small>
+                    Tools, resources & architecture
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-06
+                </span>
+
+                <strong>
+                    Agent Design
+                </strong>
+
+                <small>
+                    Evals & guardrails
+                </small>
+
+            </div>
+
+
+            <div class="journey-step">
+
+                <span class="code">
+                    FL-07
+                </span>
+
+                <strong>
+                    Agent Build
+                </strong>
+
+                <small>
+                    Implementation & testing
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEW SECTION — SKILLS
+========================================================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    06 / SKILLS & TECHNICAL FOCUS
+                </div>
+
+                <h2>
+                    Skills behind<br>
+                    the projects.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                My skill set combines backend engineering,
+                AI systems, automation and the technical
+                foundations developed through practical
+                projects and structured learning.
+
+            </p>
+
+        </div>
+
+
+        <div class="skills-layout">
+
+
+            <!-- BACKEND -->
+
+            <div class="skills-panel">
+
+                <h3>
+                    Backend Engineering
+                </h3>
+
+                <p class="skills-panel-description">
+
+                    Technologies and engineering areas used
+                    throughout my Backend AI Engineering
+                    progression.
+
+                </p>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        Programming & Runtime
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill primary">
+                            JavaScript
+                        </span>
+
+                        <span class="skill primary">
+                            Node.js
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        Backend
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill primary">
+                            Express.js
+                        </span>
+
+                        <span class="skill">
+                            REST APIs
+                        </span>
+
+                        <span class="skill">
+                            CRUD
+                        </span>
+
+                        <span class="skill">
+                            Authentication
+                        </span>
+
+                        <span class="skill">
+                            JWT
+                        </span>
+
+                        <span class="skill">
+                            API Testing
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        Data & Infrastructure
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill primary">
+                            PostgreSQL
+                        </span>
+
+                        <span class="skill">
+                            SQLite
+                        </span>
+
+                        <span class="skill primary">
+                            Docker
+                        </span>
+
+                        <span class="skill">
+                            Docker Compose
+                        </span>
+
+                        <span class="skill">
+                            Git
+                        </span>
+
+                        <span class="skill">
+                            GitHub
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI -->
+
+            <div class="skills-panel">
+
+                <h3>
+                    AI Engineering & Automation
+                </h3>
+
+                <p class="skills-panel-description">
+
+                    AI capabilities supported by my practical
+                    workflow work and Anthropic learning
+                    progression.
+
+                </p>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        AI Systems
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill primary">
+                            AI Fluency
+                        </span>
+
+                        <span class="skill primary">
+                            LLM Workflows
+                        </span>
+
+                        <span class="skill">
+                            Prompt Engineering
+                        </span>
+
+                        <span class="skill">
+                            AI Evaluation
+                        </span>
+
+                        <span class="skill">
+                            Guardrails
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        Agent Engineering
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill primary">
+                            AI Agents
+                        </span>
+
+                        <span class="skill primary">
+                            Agent Skills
+                        </span>
+
+                        <span class="skill">
+                            Subagents
+                        </span>
+
+                        <span class="skill">
+                            Tool Use
+                        </span>
+
+                        <span class="skill">
+                            MCP
+                        </span>
+
+                        <span class="skill">
+                            MCP Servers
+                        </span>
+
+                        <span class="skill">
+                            MCP Clients
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="skills-group">
+
+                    <div class="skills-group-title">
+                        AI Platforms & Automation
+                    </div>
+
+                    <div class="skills-cloud">
+
+                        <span class="skill secondary">
+                            Claude
+                        </span>
+
+                        <span class="skill secondary">
+                            Claude Code
+                        </span>
+
+                        <span class="skill secondary">
+                            Claude API
+                        </span>
+
+                        <span class="skill">
+                            Gemini
+                        </span>
+
+                        <span class="skill">
+                            n8n
+                        </span>
+
+                        <span class="skill">
+                            Notion
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEW SECTION — ANTHROPIC CERTIFICATIONS
+========================================================= -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    07 / ANTHROPIC CERTIFICATIONS
+                </div>
+
+                <h2>
+                    20 completed<br>
+                    Anthropic courses.
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+
+                Structured learning completed through Anthropic's
+                training platform, spanning AI Fluency, Claude,
+                Claude Code, the Claude API, MCP, agent skills,
+                subagents and cloud deployment.
+
+            </p>
+
+        </div>
+
+
+        <p class="certification-intro">
+
+            These certifications complement the practical work
+            shown elsewhere in this portfolio. They demonstrate
+            continued learning across both general AI Fluency
+            and technical AI engineering topics.
+
+        </p>
+
+
+        <div class="certification-summary">
+
+            <div class="cert-stat">
+
+                <strong>
+                    20
+                </strong>
+
+                <span>
+                    Courses Completed
+                </span>
+
+            </div>
+
+
+            <div class="cert-stat">
+
+                <strong>
+                    10
+                </strong>
+
+                <span>
+                    AI Fluency Courses
+                </span>
+
+            </div>
+
+
+            <div class="cert-stat">
+
+                <strong>
+                    10
+                </strong>
+
+                <span>
+                    ML & Backend Courses
+                </span>
+
+            </div>
+
+
+            <div class="cert-stat">
+
+                <strong>
+                    Advanced
+                </strong>
+
+                <span>
+                    MCP Topics Completed
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="certification-grid">
+
+
+            <!-- =================================================
+                 AI FLUENCY GROUP
+            ================================================= -->
+
+            <div class="cert-group-heading">
+
+                AI Fluency & Foundations
+
+            </div>
+
+
+            <!-- 01 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        01
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency: Framework & Foundations
+                </h3>
+
+                <p>
+                    Collaborate with AI systems effectively,
+                    efficiently, ethically and safely.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-framework-foundations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 02 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        02
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude 101
+                </h3>
+
+                <p>
+                    Core Claude capabilities and everyday
+                    AI-assisted work.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 03 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        03
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    Introduction to Claude Cowork
+                </h3>
+
+                <p>
+                    File workflows, research workflows,
+                    plugins and Claude Cowork task loops.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/introduction-to-claude-cowork"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 04 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        04
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Capabilities and Limitations
+                </h3>
+
+                <p>
+                    Understanding how AI works and recognizing
+                    practical capabilities and limitations.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-capabilities-and-limitations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 05 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        05
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency for Students
+                </h3>
+
+                <p>
+                    AI Fluency applied to learning, career planning
+                    and academic success.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-for-students"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 06 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        06
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency for Small Businesses
+                </h3>
+
+                <p>
+                    Applying AI Fluency to impact, efficiency,
+                    mission and values.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-for-small-businesses"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 07 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        07
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency for Educators
+                </h3>
+
+                <p>
+                    Applying AI Fluency to teaching, instructional
+                    design and strategy.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-for-educators"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 08 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        08
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Teaching AI Fluency
+                </h3>
+
+                <p>
+                    Teaching and assessing AI Fluency in
+                    instructor-led settings.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/teaching-ai-fluency"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 09 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        09
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency for Nonprofits
+                </h3>
+
+                <p>
+                    Applying AI Fluency to organizational impact
+                    while staying aligned with mission and values.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-for-nonprofits"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 10 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        10
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    AI Fluency for Builders
+                </h3>
+
+                <p>
+                    Taking the full path from problem definition
+                    to a shipped AI solution.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/ai-fluency-for-builders"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- =================================================
+                 ML & BACKEND GROUP
+            ================================================= -->
+
+            <div class="cert-group-heading">
+
+                ML & Backend — Technical AI Engineering
+
+            </div>
+
+
+            <!-- 11 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        11
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude Code 101
+                </h3>
+
+                <p>
+                    Using Claude Code effectively in daily
+                    software development workflows.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-code-101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 12 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        12
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude Code in Action
+                </h3>
+
+                <p>
+                    Integrating Claude Code into a development
+                    workflow.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-code-in-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 13 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        13
+                    </span>
+
+                    <span class="cert-level">
+                        Beginner
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude Platform 101
+                </h3>
+
+                <p>
+                    Building with the Claude Developer Platform
+                    from the ground up.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-platform-101"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 14 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        14
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Building with the Claude API
+                </h3>
+
+                <p>
+                    Working with Anthropic models through the
+                    Claude API.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-with-the-anthropic-api"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 15 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        15
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Introduction to Model Context Protocol
+                </h3>
+
+                <p>
+                    Building MCP servers and clients with tools,
+                    resources and prompts.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/introduction-to-model-context-protocol"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 16 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        16
+                    </span>
+
+                    <span class="cert-level">
+                        Advanced
+                    </span>
+
+                </div>
+
+                <h3>
+                    Model Context Protocol:
+                    Advanced Topics
+                </h3>
+
+                <p>
+                    Advanced MCP patterns including sampling,
+                    notifications, filesystem access and
+                    production transport.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/model-context-protocol-advanced-topics"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 17 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        17
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Introduction to Agent Skills
+                </h3>
+
+                <p>
+                    Building, configuring and sharing reusable
+                    Skills in Claude Code.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/introduction-to-agent-skills"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 18 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        18
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Introduction to Subagents
+                </h3>
+
+                <p>
+                    Using and creating sub-agents to manage
+                    context, delegate tasks and build specialized
+                    workflows.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/introduction-to-subagents"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 19 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        19
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude with Amazon Bedrock
+                </h3>
+
+                <p>
+                    Working with Anthropic models through
+                    Amazon Bedrock and AWS.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-in-amazon-bedrock"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+
+            <!-- 20 -->
+
+            <article class="cert-card">
+
+                <div class="cert-top">
+
+                    <span class="cert-number">
+                        20
+                    </span>
+
+                    <span class="cert-level">
+                        Intermediate
+                    </span>
+
+                </div>
+
+                <h3>
+                    Claude with Google Cloud's Vertex AI
+                </h3>
+
+                <p>
+                    Working with Anthropic models through
+                    Google Cloud's Vertex AI.
+                </p>
+
+                <a
+                    href="https://anthropic.skilljar.com/claude-with-google-vertex"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="cert-link"
+                >
+                    Verify on Anthropic ↗
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CAPSTONE
+========================================================= -->
+
+<section id="capstone">
+
+    <div class="container">
+
+        <div class="capstone">
+
+            <div class="section-number">
+                08 / WEEK 6 CAPSTONE
+            </div>
+
+            <h3>
+                Impact Project —
+                Launch, Demo & Story
+            </h3>
+
+            <p class="capstone-intro">
+
+                The capstone brings the portfolio together:
+                a launched professional portfolio, public proof,
+                a short build story, a live demonstration,
+                an honest limitation and a plan for continued
+                development.
+
+            </p>
+
+
+            <div class="capstone-grid">
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        The Build
+                    </strong>
+
+                    <p>
+
+                        A live portfolio containing real backend
+                        engineering work and AI systems work,
+                        structured so a new visitor can understand
+                        the work quickly.
+
+                    </p>
+
+                </div>
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        The Proof
+                    </strong>
+
+                    <p>
+
+                        A build-in-public story documenting one
+                        genuine engineering win and one genuine
+                        limitation rather than presenting a
+                        perfect retrospective story.
+
+                    </p>
+
+                </div>
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        The Demo
+                    </strong>
+
+                    <p>
+
+                        A 3–5 minute walkthrough showing the live
+                        portfolio, one real feature working and
+                        one place where AI performed meaningful
+                        work.
+
+                    </p>
+
+                </div>
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        The Build Write-up
+                    </strong>
+
+                    <p>
+
+                        Stack choices, reasons behind those choices,
+                        the hardest failure encountered, the fix,
+                        and the next engineering step.
+
+                    </p>
+
+                </div>
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        The Next Build
+                    </strong>
+
+                    <p>
+
+                        The portfolio is designed to keep growing.
+                        The next case study will follow the same
+                        Problem → What I Did → What Came Of It
+                        structure.
+
+                    </p>
+
+                </div>
+
+
+                <div class="capstone-item">
+
+                    <strong>
+                        FlyRank Loop
+                    </strong>
+
+                    <p>
+
+                        The final stage includes the official
+                        FlyRank graduate badge, verification link 
+                        and showcase submission when those assets
+                        are available.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                class="hero-actions"
+                style="margin-top:35px;"
+            >
+
+                <a
+                    href="https://drive.google.com/file/d/1fKBkQLuYRhIOZ0ijqzf6ke_Cm5rbVWn5/view?usp=sharing"
+                    class="btn btn-primary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Watch my 3-5 minute build demo"
+                >
+                    Demo — Watch Video Walkthrough ↗
+                </a>
+
+
+                <a
+                    href="/story.html"
+                    class="btn btn-secondary"
+                    title="Read my final build write-up"
+                >
+                    Build Story — Read Now
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div>
+
+                <div class="section-number">
+                    09 / ABOUT
+                </div>
+
+                <h2>
+                    From business background<br>
+                    to engineering systems.
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-copy">
+
+                <p>
+
+                    My professional background began outside
+                    software engineering. My transition into
+                    technology has been deliberate and evidence
+                    driven: learn the concept, build something,
+                    troubleshoot it, document what happened and
+                    continue to the next layer.
+
+                </p>
+
+                <p>
+
+                    That approach led me into Backend AI Engineering,
+                    where I am particularly interested in the systems
+                    that connect users, business logic, structured
+                    data and AI models.
+
+                </p>
+
+                <p class="about-highlight">
+
+                    I am not building a portfolio around a list of
+                    technologies. I am building evidence of how I
+                    learn, design, debug and improve real systems.
+
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <strong>
+                        Business & Operations Background
+                    </strong>
+
+                    <span>
+
+                        Experience working with structured business
+                        processes, reporting and operational systems.
+
+                    </span>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>
+                        AI Fluency Development
+                    </strong>
+
+                    <span>
+
+                        AI workflows, prompt engineering, agents,
+                        MCP, evaluation and guardrail concepts.
+
+                    </span>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>
+                        Backend AI Engineering
+                    </strong>
+
+                    <span>
+
+                        Node.js, Express.js, APIs, databases,
+                        Docker, PostgreSQL and authentication.
+
+                    </span>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>
+                        Applied AI Systems
+                    </strong>
+
+                    <span>
+
+                        Navigant education workflow and student
+                        guidance agent architecture.
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-number">
+            10 / CONTACT
+        </div>
+
+        <h2>
+
+            Review the work.<br>
+            Let's talk engineering.
+
+        </h2>
+
+        <p>
+
+            If you are evaluating my work for a junior backend,
+            AI engineering or AI automation opportunity, start
+            with the projects and GitHub evidence below.
+
+        </p>
+
+
+        <!-- START OF NETLIFY CONTACT FORM BOX (NEW VISUAL ADDITION) -->
+        <div style="max-width: 550px; margin: 40px auto; background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-md); text-align: left;">
+            <form name="portfolio-contact" method="POST" data-netlify="true" id="contactForm">
+                
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="display: block; color: var(--accent); font-family: monospace; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;">Name</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; background: var(--bg); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: var(--text); font-size: 0.9rem;" />
+                </div>
+
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; color: var(--accent); font-family: monospace; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;">Email Address</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; background: var(--bg); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: var(--text); font-size: 0.9rem;" />
+                </div>
+
+                <div style="margin-bottom: 24px;">
+                    <label for="message" style="display: block; color: var(--accent); font-family: monospace; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;">Message</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; background: var(--bg); border: 1px solid var(--border); padding: 12px; border-radius: 8px; color: var(--text); font-size: 0.9rem; resize: vertical; line-height: 1.5;"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Send Message</button>
+            </form>
+        </div>
+        <!-- END OF NETLIFY CONTACT FORM BOX -->
+
+
+        <div class="contact-actions">
+
+
+            <a
+                href="https://github.com/SyedaMun/flyrank-crud-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary"
+            >
+                GitHub Repository ↗
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/m-bukhari-pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-secondary"
+            >
+                LinkedIn ↗
+            </a>
+
+
+            <a
+                href="#"
+                class="btn btn-secondary"
+                onclick="return false;"
+                title="Add your CV link here"
+            >
+                CV — Add Link
+            </a>
+
+
+            <a
+                href="#"
+                class="btn btn-secondary"
+                onclick="return false;"
+                title="Add your booking link here"
+            >
+                Book a Conversation — Add Link
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container footer-grid">
+
+
+        <div class="footer-copy">
+
+            © 2026 Syeda Munazza Bukhari.
+            Built as a living engineering portfolio.
+
+        </div>
+
+
+        <div class="footer-links">
+
+
+            <a
+                href="https://github.com/SyedaMun/flyrank-crud-api"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                GitHub
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/in/m-bukhari-pro"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                LinkedIn
+            </a>
+
+
+            <span class="badge-placeholder">
+
+                FlyRank Graduate Badge —
+                Add After Approval
+
+            </span>
+
+
+            <a
+                href="#"
+                onclick="return false;"
+                title="Add official FlyRank verification URL"
+            >
+                Verification —
+                Add After Approval
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
+```
