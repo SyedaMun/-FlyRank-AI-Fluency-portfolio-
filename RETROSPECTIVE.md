@@ -10,7 +10,7 @@ Right now, you are standing at the starting line of this track looking at static
 ### 📉 The Journey: From Text Boxes to Autonomous Pipelines
 In Week 1, you mapped out your workflows thinking that utilizing AI effectively meant typing faster. By Week 4, your perspective fundamentally shifted when you built the **Navigant Education Guidance Workflow (FL-04)**. You stopped treating AI like an execution author and started treating it like an inference module locked inside a larger backend system. You coupled **Notion data records** as raw data blocks, routed them through **n8n as an orchestration engine**, and utilized **Gemini for data synthesis**. 
 
-The real transformation occurred when you moved from fixed, deterministic workflows to autonomous, tool-enabled agents in **FL-06 and FL-07**. You stopped hardcoding instructions. Instead, you engineered a functional system design specification for the **Navigant Student Guidance Agent**, establishing strict programmatic boundaries, defining edge-case evaluations, and designing multi-layered guardrails to ensure that AI output was strictly grounded against primary sources with a 0% hallucination mandate.
+The real transformation occurred when you moved from fixed, deterministic workflows to autonomous, tool-enabled agents in **FL-06 and FL-07**. You stopped hardcoding instructions. Instead, you engineered a functional system design specification for the **Navigant Student Guidance Agent**, establishing strict programmatic boundaries, defining edge-case evaluations, and designing multi-layered guardrails to ensure that AI output was strictly grounded against primary sources with a 0% hallucination mandate. Your live progress timeline is fully detailed in your public story ledger: [syeda-munazza-bukhari-portfolio.netlify.app/story](https://netlify.app).
 
 ### 🛠️ The Hardest Technical Win: Taming Concurrency and Rates
 The defining moment of your internship occurred during the development of your backend data processing loop. While pumping input streams into the n8n data engine, your app violently crashed with cascading **HTTP 429 Concurrency Limit Constraints**. The API was hitting strict platform rate-limits, choking the loop completely. 
@@ -29,4 +29,5 @@ You're ready for this. You've earned the credentials by building systems that ru
 
 Best regards,  
 **Syeda Munazza Bukhari**  
-Founder & Executive Director, Navigant Education Consultants
+Founder & Executive Director, Navigant Education Consultants  
+*Live Video Walkthrough:* [Watch Capstone System Demonstration](https://google.com)
