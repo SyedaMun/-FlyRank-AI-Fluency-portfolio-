@@ -23,8 +23,8 @@ This root hub repository functions as empirical proof of my capability to handle
 ### 2. ðŸŒ Syeda Munazza Bukhari Showcase Portfolio (`/Syeda-Munazza-Bukhari-portfolio`)
 * **Core Logic:** Zero-dependency semantic HTML5/CSS3 frontend architecture paired with comprehensive technical system manifests.
 * **Key Milestone:** Integrated unified Netlify forms, customized Open Graph metadata SEO headers, Cloudflare Web Analytics tracker script hooks, and an expanded system architecture guide tracking engineering milestones.
-* **Live Deployment Workspace:** [syeda-munazza-bukhari-portfolio.netlify.app](https://netlify.app)
-* **Interactive Build Log:** [Read the Live Engineering Story](https://netlify.app/story)
+* **Live Deployment Workspace:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
+* **Interactive Build Log:** [Read the Live Engineering Story](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
 
 ---
 
@@ -44,7 +44,7 @@ This root hub repository functions as empirical proof of my capability to handle
 ---
 
 ## ðŸ‘¤ Contact & Connect
-* **Portfolio Showcase:** [syeda-munazza-bukhari-portfolio.netlify.app](https://netlify.app)
+* **Portfolio Showcase:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
 * **GitHub Center:** [github.com/SyedaMun](https://github.com/SyedaMun)
 
 With regards,  
