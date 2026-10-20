@@ -25,7 +25,7 @@ This root hub repository functions as empirical proof of my capability to handle
 * **Key Milestone:** Integrated unified Netlify forms, customized Open Graph metadata SEO headers, Cloudflare Web Analytics tracker script hooks, and an expanded system architecture guide tracking engineering milestones.
 * **Live Deployment Workspace:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
 * **Interactive Build Log:** [Read the Live Engineering Story](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
-
+* **Video Walkthrough:** [Watch My YouTube Demo](https://youtu.be/pGA7pRjePyU)
 ---
 
 ## Notion Assignment & Metric Audit Ledger
