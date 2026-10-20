@@ -30,7 +30,7 @@ This root hub repository functions as empirical proof of my capability to handle
 ---
 
 ## 🎓 Final Track Checkpoint Submission/Deliverables Files (FL-10)
-*   **Technical Retrospective Letter:** [Read the 612-Word Retrospective](./RETROSPECTIVE.md) *(Addressing personal growth, JavaScript tool engineering logic, and local Docker handling of HTTP 429 concurrency blocks).*
+*   **Technical Retrospective Letter:** [Read the 756-Words Retrospective](./RETROSPECTIVE.md) *(Addressing personal growth, JavaScript tool engineering logic, and local Docker handling of HTTP 429 concurrency blocks).*
 *   **Future Platform Scaling Plan:** Integrated within the master retrospective to handle transitioning from local JavaScript dictionary lookups into containerized PostgreSQL relational database models.
 *   **Live Demonstration Walkthrough:** [Watch Capstone System Demonstration](https://drive.google.com/file/d/1BEfAsV5SLMAYKMRGvaIVdKUNolAETMGr/view?usp=sharing)
 *   **Build-in-Public Story (Week 6 Capstone Milestone):** [View Live Capstone Documentation Insights](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
