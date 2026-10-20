@@ -15,31 +15,69 @@ This root hub repository functions as empirical proof of my capability to handle
 
 ## Repository Index & Architecture
 
-### 1. Navigant AI Automation Platform (`/Navigant-AI-Automation`)
-* **Core Logic:** Local containerized runtime configurations orchestrating automated workflows via n8n and Docker.
+### 1. Navigant AI Automation Platform (`/navigant-automation`)
+* **Core Logic:** Local containerized runtime configurations orchestrating automated workflows via n8n and Docker on Windows 11.
 * **Key Milestone:** Transitioned traditional linear pipelines into a Goal-Directed Autonomous Tool-Calling Loop (**Navigant Student Guidance Agent MVP**) using Google Gemini integrations via local nodes.
 * **Safety Features:** Strict deterministic data boundaries to prevent runtime hallucinations by catching lookup voids and safely throwing a `Halted: Data Incomplete` status.
 
-### 2.Syeda Munazza Bukhari Showcase Portfolio (`/Syeda-Munazza-Bukhari-portfolio`)
+### 2. Syeda Munazza Bukhari Showcase Portfolio (`/syeda-munazza-bukhari-portfolio`)
 * **Core Logic:** Zero-dependency semantic HTML5/CSS3 frontend architecture paired with comprehensive technical system manifests.
 * **Key Milestone:** Integrated unified Netlify forms, customized Open Graph metadata SEO headers, Cloudflare Web Analytics tracker script hooks, and an expanded system architecture guide tracking engineering milestones.
 * **Live Deployment Workspace:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
 * **Interactive Build Log:** [Read the Live Engineering Story](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
 * **Video Walkthrough:** [Watch My YouTube Demo](https://youtu.be/pGA7pRjePyU)
+
 ---
 
-## Notion Assignment & Metric Audit Ledger
+## 🎓 Final Track Checkpoint Deliverables (Week 8 / FL-10)
+*   **Technical Retrospective Letter:** [Read the 500-800 Word Retrospective](./RETROSPECTIVE.md) *(Addressing personal growth, JavaScript tool logic, and HTTP 429 concurrency handling).*
+*   **Future Platform Scaling Plan:** Integrated within the master retrospective to handle transitioning from local JavaScript dictionary lookups into containerized PostgreSQL relational database models.
+*   **Build-in-Public Story:** [View Live Capstone Documentation Insights](https://netlify.appstory)
 
-| Assignment Reference | Module Title & Milestones | Core Implementation & Engineering Value |
-| :--- | :--- | :--- |
-| **FL-01** | AI Workflow Audit & Tool Setup | Established strict system context guidelines and workspace telemetry. |
-| **FL-02** | Draw the Path: Portfolio Sitemap | Engineered 4-stage technical discovery layout pressure-tested via simulation loops. |
-| **FL-03** | What Are You Proving? | Defined target engineering niche and stakeholder validation strategies. |
-| **FL-04** | Automation Workflow v2 | Structured sequential extraction workflows mapping dynamic API response tables via n8n. |
-| **FL-06 / FL-07** | Autonomous Agent Design & Build | Deployed a 5-case stress-test profile matrix to evaluate agent compliance boundaries and added local validation tools to drop hallucination rates to 0%. |
-| **FL-09 (Week 8)** | Systems Documentation & Demo | Upgraded production project manifest tracking explicit architecture sketches, V2 evaluation benchmarks, and unlisted desktop verification streams. |
+---
 
-**Verified Deployment Stack:** Docker Compose, Semantic Web Engines, Netlify CDN infrastructure, n8n Runtime Engines, and Google Gemini API matrices.
+## 📊 Detailed Assignment & Metric Audit Ledger
+
+### 📦 Phase 1: Onboarding & Workflow Strategy (Week 1)
+*   **FL-01: AI Workflow Audit and Tool Setup**
+    *   *Implementation:* Built a 15-task real-world operational taxonomy classifying human-only dependencies versus automation potentials. Configured a dedicated Claude Project workspace with customized system instructions anchoring code style parameters and tone preferences.
+    *   *Engineering Value:* Established measurable boundaries for safe AI delegation, ensuring high-risk tasks remain under expert oversight while data processing tasks are optimized for automated handling.
+*   **FL-Sitemap: Portfolio Strategy & Architectural Mapping**
+    *   *Implementation:* Sketched and mapped a minimal, hyper-targeted sitemap structure strictly aligned to a single career objective: providing visible backend verification to software reviewers. 
+    *   *Engineering Value:* Eliminated page bloat, ensuring that every asset, route, and layout view directly supports technical validation and quick navigation under five minutes.
+
+### 🏗️ Phase 2: Prompt Engineering & Model Guardrails (Weeks 2-3)
+*   **FL-02: Prompting Fundamentals on Real Tasks v2**
+    *   *Implementation:* Developed a rigorous 6-stage prompt engineering ladder implementing role-assignment, sharp constraint metrics, contextual grounding fields, and structural schema instructions. Cross-evaluated identical pipelines on Claude and ChatGPT models.
+    *   *Engineering Value:* Developed deep insight into structural multi-model variations. Replaced fragile, open-ended prompt strings with highly predictable, reusable template wrappers that return reliable formats.
+*   **FL-Voice: Voice Card & Case Framing Frameworks**
+    *   *Implementation:* Formulated a 5-to-7 word definitive style directive (warm, plain, direct, no technical jargon) enforced as a constant instruction profile across all code generation instances.
+    *   *Engineering Value:* Eliminated generic, high-filler AI content loops, ensuring all documentation reads with clean engineering credibility.
+
+### ⚙️ Phase 3: Core AI Systems & Workflow Automation (Weeks 4-5)
+*   **FL-04: Ship an Automation Workflow v2 (Flagship Integration)**
+    *   *Implementation:* Orchestrated an automated end-to-end data pipeline within containerized environments. Integrated a live **Notion data database** as input, passing blocks seamlessly through **n8n orchestration nodes** into **Google Gemini** models for automatic processing.
+    *   *Engineering Value:* Successfully automated complex manual tracking processes. Transitioned the pipeline from a fragile cloud script to an efficient, low-footprint, container-isolated infrastructure.
+*   **FL-05: Agent Concepts and MCP Basics**
+    *   *Implementation:* Conducted technical research regarding the Model Context Protocol (MCP) primitives. Configured local MCP connectors to link file system trees securely to Claude client execution contexts.
+    *   *Engineering Value:* Moved beyond rigid, isolated web chat frames, proving the capacity to safely bridge large language models directly into system boundaries and local data spaces.
+
+### 🤖 Phase 4: Autonomous Agents & Impact Capstones (Weeks 6-7)
+*   **FL-Impact: Week 6 Impact Capstone Strategy**
+    *   *Implementation:* Designed the permanent career architecture platform manifest. Programmed a custom JavaScript validation module (`uk_university_requirements_lookup`) using `.toLowerCase().trim()` data normalization to drop hallucination rates down to 0%.
+    *   *Engineering Value:* Built defensive logic wrappers around the LLM engine. When encountering unmapped major categories (such as Psychology), the system securely halts runtime processing and issues a clean `Halted: Data Incomplete` message rather than failing or outputting false claims.
+*   **FL-06 / FL-07: Autonomous Agent Design & Build**
+    *   *Implementation:* Upgraded linear loops into a goal-directed autonomous tool-calling environment (**Navigant Student Guidance Agent MVP**). Configured a strict 5-case pre-build testing matrix to evaluate model conformance boundaries under high stress.
+    *   *Engineering Value:* Engineered a robust infrastructure patch against severe API limits by restricting runtime batch-fetch sequences to 1 record at a time, completely neutralizing cascading **HTTP 429 Concurrency Exceptions**.
+
+---
+
+## 🛠️ Verified System Stack
+*   **Orchestration & Automation:** n8n Community Edition, Docker Compose
+*   **AI Inference Processing:** Google Gemini API Matrix (`gemini-3-flash-preview`)
+*   **Frontend & Form Architecture:** Semantic HTML5/CSS3 Web Engines, Unified Netlify Forms
+*   **Data Environments:** Persistent Notion Databases, Local Structured JSON Arrays
+*   **Analytics & Security:** HTTPS SSL Encryption protocols, Cloudflare Web Analytics Tracker
 
 ---
 
