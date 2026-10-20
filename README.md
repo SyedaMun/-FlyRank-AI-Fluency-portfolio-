@@ -1,26 +1,26 @@
-# 🚀 FlyRank AI Internship: General AI Fluency Master Portfolio
+﻿# ðŸš€ FlyRank AI Internship: General AI Fluency Master Portfolio
 
-### 🧑‍💻 Syeda Munazza Bukhari
+### ðŸ§‘â€ðŸ’» Syeda Munazza Bukhari
 **Positioning:** Backend AI Engineer & Automation Specialist  
 **Targeting:** Engineering Managers at early-stage AI startups who require rigorous data validation, API stability, and resilient autonomous systems.
 
 ---
 
-## 🏗️ Core Engineering Claim & Objectives
+## ðŸ—ï¸ Core Engineering Claim & Objectives
 > "I build backend APIs that transform unstructured user requests into structured, validated data that AI applications can process reliably."
 
 This root hub repository functions as empirical proof of my capability to handle technical logic, design tool-grounded execution loops, and isolate production-ready containerized architectures.
 
 ---
 
-## 📂 Repository Index & Architecture
+## ðŸ“‚ Repository Index & Architecture
 
-### 1. 🤖 Navigant AI Automation Platform (`/Navigant-AI-Automation`)
+### 1. ðŸ¤– Navigant AI Automation Platform (`/Navigant-AI-Automation`)
 * **Core Logic:** Local containerized runtime configurations orchestrating automated workflows via n8n and Docker.
 * **Key Milestone:** Transitioned traditional linear pipelines into a Goal-Directed Autonomous Tool-Calling Loop (**Navigant Student Guidance Agent MVP**) using Google Gemini integrations via local nodes.
 * **Safety Features:** Strict deterministic data boundaries to prevent runtime hallucinations by catching lookup voids and safely throwing a `Halted: Data Incomplete` status.
 
-### 2. 🌐 Syeda Munazza Bukhari Showcase Portfolio (`/Syeda-Munazza-Bukhari-portfolio`)
+### 2. ðŸŒ Syeda Munazza Bukhari Showcase Portfolio (`/Syeda-Munazza-Bukhari-portfolio`)
 * **Core Logic:** Zero-dependency semantic HTML5/CSS3 frontend architecture paired with comprehensive technical system manifests.
 * **Key Milestone:** Integrated unified Netlify forms, customized Open Graph metadata SEO headers, Cloudflare Web Analytics tracker script hooks, and an expanded system architecture guide tracking engineering milestones.
 * **Live Deployment Workspace:** [syeda-munazza-bukhari-portfolio.netlify.app](https://netlify.app)
@@ -28,7 +28,7 @@ This root hub repository functions as empirical proof of my capability to handle
 
 ---
 
-## 📝 Notion Assignment & Metric Audit Ledger
+## ðŸ“ Notion Assignment & Metric Audit Ledger
 
 | Assignment Reference | Module Title & Milestones | Core Implementation & Engineering Value |
 | :--- | :--- | :--- |
@@ -43,7 +43,7 @@ This root hub repository functions as empirical proof of my capability to handle
 
 ---
 
-## 👤 Contact & Connect
+## ðŸ‘¤ Contact & Connect
 * **Portfolio Showcase:** [syeda-munazza-bukhari-portfolio.netlify.app](https://netlify.app)
 * **GitHub Center:** [github.com/SyedaMun](https://github.com/SyedaMun)
 
