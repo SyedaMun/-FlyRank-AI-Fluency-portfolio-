@@ -43,6 +43,8 @@ The interface assets are linked to automated hosting workflows:
 - **Production Deployment:** Managed via Netlify with active secure SSL/HTTPS encryption.
 - **Live Application Entry:** [View My Live Portfolio Workspace](https://syeda-munazza-bukhari-portfolio.netlify.app/)
 - **Interactive Build Log:** [Read the Live Engineering Story](https://syeda-munazza-bukhari-portfolio.netlify.app/story)
+- **Video Walkthrough:** [Watch My YouTube Demo](https://youtu.be/pGA7pRjePyU)
+
 
 ---
 
