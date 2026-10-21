@@ -64,10 +64,10 @@ This root hub repository functions as empirical proof of my capability to handle
     *   *Implementation:* Conducted technical research regarding the Model Context Protocol (MCP) primitives. Configured local MCP connectors to link file system trees securely to Claude client execution contexts.
     *   *Engineering Value:* Moved beyond rigid, isolated web chat frames, proving the capacity to safely bridge large language models directly into system boundaries and local data spaces.
 
-### 🤖 Phase 4: Autonomous Agents & Custom Engineering Systems & Impact Capstone (Weeks 6-7)
+## 🤖 Phase 4: Autonomous Agents & Custom Engineering Systems & Impact Capstone (Weeks 6-7)
 
 ### 🏆 FEATURED FLAGSHIP CAPSTONE: Week 6 AI Fluency Impact Project
-## 🎓 FlyRank AI Fluency Capstone: Week 6 AI Fluency Impact Project "Send the Link: Launch, Demo & Story"
+### 🎓 FlyRank AI Fluency Capstone: Week 6 AI Fluency Impact Project "Send the Link: Launch, Demo & Story"
 
 This portfolio hub stands as the culmination of the 10-week curriculum tracks, packaging empirical evidence of software execution through four integrated structural pillars:
 
@@ -105,7 +105,7 @@ This portfolio hub stands as the culmination of the 10-week curriculum tracks, p
 *   **Target Code Identifier:** `BE-02 — PostgreSQL Container Integration & JWT Authentication Shield`
 
 ### 🛠️ Continuity & Habit Reinforcement
-*   ** Claude Project:** Workspace context, voice card directives, and n8n system schemas are permanently cached to make future additions cheap and fast.
+*   **Claude Project:** Workspace context, voice card directives, and n8n system schemas are permanently cached to make future additions cheap and fast.
 *   **Calendar Reminder:** An active recurring calendar nudge has been configured on the desktop to enforce the next sprint launch.
 ---
 
