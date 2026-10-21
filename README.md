@@ -93,6 +93,22 @@ This portfolio hub stands as the culmination of the 10-week curriculum tracks, p
 
 ---
 
+---
+
+## 📅 The Plan to Keep Building (Future Milestones)
+**Status:** ✅ Logged and Tracked
+
+### 1. The Next Case Study (PostgreSQL Migration)
+*   **Problem:** System relies on volatile local JavaScript in-memory lookup arrays that erase upon n8n/Docker container restarts.
+*   **What I'll Do:** Pull a persistent PostgreSQL relational database image using Docker Compose, write structural SQL schemas for university criteria, and build a JWT validation layer.
+*   **What Comes Of It:** A stable, container-isolated data backend that secures state across reboots and drops manual array upkeep down to 0%.
+*   **Target Code Identifier:** `BE-02 — PostgreSQL Container Integration & JWT Authentication Shield`
+
+### 🛠️ Continuity & Habit Reinforcement
+*   ** Claude Project:** Workspace context, voice card directives, and n8n system schemas are permanently cached to make future additions cheap and fast.
+*   **Calendar Reminder:** An active recurring calendar nudge has been configured on the desktop to enforce the next sprint launch.
+---
+
 ## Contact & Connect
 * **Portfolio Showcase:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
 * **GitHub Center:** [github.com/SyedaMun](https://github.com/SyedaMun)
