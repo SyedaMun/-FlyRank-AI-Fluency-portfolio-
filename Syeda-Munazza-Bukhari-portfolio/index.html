@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
     <meta property="og:title" content="Syeda Munazza Bukhari | Backend AI Engineering Portfolio">
     <meta property="og:description" content="Explore live implementations of containerized PostgreSQL layers, n8n agent architectures, and out-of-process distributed Inngest background jobs.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://netlify.app">
+    <meta property="og:url" content="https://syeda-munazza-bukhari-portfolio.netlify.app/">
     <!-- END OF WEEK 7 LAUNCH HYGIENE METADATA -->
 
     <title>Syeda Munazza Bukhari | Backend AI Engineering Portfolio</title>
@@ -258,6 +257,11 @@
 
         .btn-secondary {
             background: rgba(255,255,255,0.03);
+        }
+
+        .btn[disabled]:hover {
+            transform: none;
+            border-color: var(--border-strong);
         }
 
         .hero-proof {
@@ -1188,6 +1192,53 @@
             font-size: 0.75rem;
         }
 
+        /* Uniform footer action buttons */
+        .footer-links .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+
+            border: 1px solid var(--border-strong);
+            border-radius: 8px;
+
+            padding: 7px 10px;
+
+            background: rgba(255,255,255,0.025);
+            color: var(--muted-light);
+
+            font-size: 0.75rem;
+            font-weight: 750;
+            line-height: 1.4;
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .footer-links .footer-badge:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .footer-links .footer-badge.is-accent {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: var(--accent-soft);
+        }
+
+        .footer-links .footer-badge.is-blue {
+            border-color: var(--blue);
+            color: var(--blue);
+            background: var(--blue-soft);
+        }
+
+        .footer-links .footer-badge.is-blue:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
         /* =========================================================
            RESPONSIVE
         ========================================================= */
@@ -1304,7 +1355,7 @@
     </style>
 
     <!-- START OF WEEK 7 METRIC ANALYTICS TRACKER -->
-    <script defer src="https://cloudflareinsights.com" data-cf-beacon='{"token": "placeholder_token_for_october_23"}'></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "placeholder_token_for_october_23"}'></script>
     <!-- END OF WEEK 7 METRIC ANALYTICS TRACKER -->
 
 </head>
@@ -1770,10 +1821,12 @@
                     </div>
 
                     <a
-                        href="#case-studies"
+                        href="https://github.com/SyedaMun/-FlyRank-AI-Fluency-portfolio-/tree/main/Navigant-AI-Automation"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         class="btn btn-secondary"
                     >
-                        View Case Study ↓
+                        View Repository ↗
                     </a>
 
                 </div>
@@ -1868,12 +1921,27 @@
 
                     </div>
 
-                    <a
-                        href="#capstone"
-                        class="btn btn-secondary"
-                    >
-                        Explore ↓
-                    </a>
+                    <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+
+                        <a
+                            href="https://github.com/SyedaMun/-FlyRank-AI-Fluency-portfolio-/tree/main/Navigant-AI-Automation"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary"
+                        >
+                            View Repository ↗
+                        </a>
+
+                        <a
+                            href="https://drive.google.com/file/d/1q4DclW3f-SOeQ6AVT9WiDug0IKxhP4DW/view"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-secondary"
+                        >
+                            Watch Loop Test ↗
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -3504,6 +3572,20 @@
 
             </p>
 
+            <div class="capstone-tracks" style="margin-top: 14px; max-width: 780px; line-height: 1.7;">
+
+                <p style="margin: 0 0 8px; color: var(--muted-light);">
+                    <strong style="color: var(--accent);">Track 1: Backend AI Engineering (Active Capstone Sprint Phase)</strong> —
+                    Coursework Complete / Final Capstone Core Architecture Under Active Construction.
+                </p>
+
+                <p style="margin: 0; color: var(--muted-light);">
+                    <strong style="color: var(--accent);">Track 2: General AI Fluency (100% Complete & Verified Graduate)</strong> —
+                    Evaluated and Officially Graduated.
+                </p>
+
+            </div>
+
 
             <div class="capstone-grid">
 
@@ -3619,27 +3701,73 @@
 
             <div
                 class="hero-actions"
-                style="margin-top:35px;"
+                style="margin-top:35px; gap: 28px;"
             >
 
-                <a
-                    href="https://drive.google.com/file/d/1fKBkQLuYRhIOZ0ijqzf6ke_Cm5rbVWn5/view?usp=sharing"
-                    class="btn btn-primary"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Watch my 3-5 minute build demo"
-                >
-                    Demo — Watch Video Walkthrough ↗
-                </a>
+                <!-- GROUP A — TRACK 1: BACKEND AI ENGINEERING -->
+                <div class="action-group">
+
+                    <div style="color: var(--accent); font-family: monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">
+                        Track 1 · Backend AI Engineering (Active Capstone Sprint Phase)
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        disabled
+                        aria-disabled="true"
+                        title="Backend capstone is under active construction"
+                        style="opacity: 0.6; cursor: not-allowed; color: var(--text); font-family: inherit;"
+                    >
+                        Backend Capstone Demo (Pending Architecture)
+                    </button>
+
+                </div>
 
 
-                <a
-                    href="/story.html"
-                    class="btn btn-secondary"
-                    title="Read my final build write-up"
-                >
-                    Build Story — Read Now
-                </a>
+                <!-- GROUP B — TRACK 2: AI FLUENCY -->
+                <div class="action-group">
+
+                    <div style="color: var(--accent); font-family: monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">
+                        Track 2 · General AI Fluency (100% Complete & Verified Graduate)
+                    </div>
+
+                    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+
+                        <!-- Button A — Build story -->
+                        <a
+                            href="/story"
+                            class="btn btn-primary"
+                            title="Read my final build write-up"
+                        >
+                            Fluency Story — Read Now
+                        </a>
+
+                        <!-- Button A — Week 6 milestone -->
+                        <a
+                            href="https://drive.google.com/file/d/1fKBkQLuYRhIOZ0ijqzf6ke_Cm5rbVWn5/view?usp=sharing"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Watch my Week 6 capstone demo"
+                        >
+                            Fluency Week 6 Demo — Watch Walkthrough ↗
+                        </a>
+
+                        <!-- Button B — Week 8 graduation milestone -->
+                        <a
+                            href="https://youtu.be/pGA7pRjePyU?si=txwzeH50YHxjTQUl"
+                            class="btn btn-secondary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Watch my Week 8 graduation demo"
+                        >
+                            🎓 Fluency Week 8 Demo — Watch Walkthrough ↗
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -3816,7 +3944,7 @@
 
         <!-- START OF NETLIFY CONTACT FORM BOX (NEW VISUAL ADDITION) -->
         <div style="max-width: 550px; margin: 40px auto; background: var(--card); border: 1px solid var(--border); padding: 30px; border-radius: var(--radius-md); text-align: left;">
-            <form name="portfolio-contact" method="POST" data-netlify="true" id="contactForm">
+            <form name="portfolio-contact" method="POST" data-netlify="true" id="contactForm" action="/?success=true">
                 
                 <div style="margin-bottom: 20px;">
                     <label for="name" style="display: block; color: var(--accent); font-family: monospace; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 8px;">Name</label>
@@ -3905,55 +4033,44 @@
         </div>
 
 
-        <div class="footer-links" style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+        <div class="footer-links" style="display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; justify-content: flex-end; width: 100%;">
 
-            <a
-                href="https://github.com/SyedaMun/flyrank-crud-api"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="badge-placeholder"
-                style="border-style: solid; color: var(--muted-light); font-weight: 750; display: inline-flex; align-items: center;"
-            >
+            <a href="https://github.com/SyedaMun/flyrank-crud-api" target="_blank" rel="noopener noreferrer" class="footer-badge">
                 GitHub ↗
             </a>
 
-            <a
-                href="https://www.linkedin.com/in/m-bukhari-pro"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="badge-placeholder"
-                style="border-style: solid; color: var(--muted-light); font-weight: 750; display: inline-flex; align-items: center;"
-            >
+            <a href="https://www.linkedin.com/in/m-bukhari-pro" target="_blank" rel="noopener noreferrer" class="footer-badge">
                 LinkedIn ↗
             </a>
 
-            <!-- START OF OFFICIAL FLYRANK GRADUATE BADGE EMBED -->
-            <a 
-                href="https://aifluency.flyrank.ai" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="badge-placeholder" 
-                title="Verify FlyRank AI Internship Credentials" 
-                style="border-style: solid; color: var(--accent); font-weight: 750; display: inline-flex; align-items: center;"
-            >
-                FlyRank Graduate Badge — Staged ↗
+            <a href="https://internship.flyrank.ai/verify?id=FR-D11-4C557-FA54B&first_name=Syeda" target="_blank" rel="noopener noreferrer"
+               title="Track 1 — Backend AI Engineering (Active Capstone Sprint Phase)" class="footer-badge is-blue">
+                Backend AI Engineering · In Progress ⏳
             </a>
 
-            <a
-                href="https://aifluency.flyrank.ai/verify"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="Add official FlyRank verification URL"
-                class="badge-placeholder"
-                style="border-style: solid; color: var(--accent); font-weight: 750; display: inline-flex; align-items: center;"
-            >
-                Verification — Staged ↗
-            </a>
-            <!-- END OF OFFICIAL FLYRANK GRADUATE BADGE EMBED -->
+            <!-- RIGHT-ALIGNED STACK: verification button + visual badge -->
+            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px; max-width: max-content;">
 
-        </div>
+                <a href="https://internship.flyrank.ai/verify?id=FR-D11-4C557-FA54B&first_name=Syeda" target="_blank" rel="noopener noreferrer"
+                   title="Official document verification — FlyRank" class="footer-badge is-accent">
+                    AI Fluency Official Document Verification 📄
+                </a>
 
-            </a>
+                <!-- START OF OFFICIAL FLYRANK VISUAL BADGE CARD -->
+                <a href="https://internship.flyrank.ai/verify?id=FR-D11-4C557-FA54B&amp;first_name=Syeda" target="_blank" rel="noopener noreferrer" aria-label="Verify Syeda Munazza Bukhari's FlyRank AI Internship credential FR-D11-4C557-FA54B" style="box-sizing:border-box;margin:0;padding:14px 18px;border:1px solid #DDE4E7;background:#FFFFFF;text-decoration:none;border-radius:20px;box-shadow:0 1px 2px rgba(5,31,33,0.05);max-width:100%;display:inline-flex;align-items:center;gap:14px;">
+                  <svg width="40" height="40" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="display:block;flex:none;"><rect width="96" height="96" rx="22" fill="#051F21" /><path d="M28.2354 74.2202V67.9039C29.6419 68.4369 31.3724 68.7055 33.4311 68.7055C35.3235 68.7055 36.8153 68.2396 37.8979 67.3079C38.9805 66.3762 39.9566 64.8695 40.8218 62.792L42.6887 58.3139L29.8976 29.2879C35.0038 29.2879 39.6028 32.3307 41.5294 36.9893L47.0746 50.3985L56.0126 28.6038C57.9221 23.9452 62.5168 20.894 67.6187 20.894L50.0795 63.5936C48.4556 67.5933 46.5205 70.5102 44.2743 72.3484C42.0281 74.1867 39.1169 75.1058 35.5451 75.1058C32.6212 75.1058 30.1875 74.812 28.2354 74.2244V74.2202Z" fill="#54E399" /></svg>
+                  <span style="display:flex;flex-direction:column;gap:4px;text-align:left;">
+                  <span style="font-family:monospace;font-size:9px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(5,31,33,0.5)">FlyRank AI Internship</span>
+                  <span style="font-size:15px;font-weight:600;color:#051F21;letter-spacing:-0.01em;white-space:nowrap">Verified credential</span>
+                  <span style="font-family:monospace;font-size:11px;color:#1A7A4A">FR-D11-4C557-FA54B</span>
+                  </span>
+                  <span style="display:inline-flex;align-items:center;gap:6px;margin-left:8px;padding:6px 12px;background:rgba(84,227,153,0.12);border:1px solid rgba(84,227,153,0.28);border-radius:9999px;font-size:12px;font-weight:600;color:#1A7A4A;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="display:block;flex:none;"><circle cx="12" cy="12" r="10" stroke="#1A7A4A" stroke-width="1.5" /><path d="M7.9 12.3l2.8 2.8 5.4-5.8" stroke="#1A7A4A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>Verify
+                  </span>
+                </a>
+                <!-- END OF OFFICIAL FLYRANK VISUAL BADGE CARD -->
+
+            </div>
 
         </div>
 
@@ -3964,4 +4081,3 @@
 
 </body>
 </html>
-```
