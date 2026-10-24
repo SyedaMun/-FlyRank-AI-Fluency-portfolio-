@@ -25,3 +25,20 @@ Upgraded to a goal-directed system where the LLM is given explicit tools and aut
 The execution pipeline was verified against five strict student profile mock evaluation matrices to eliminate edge-case errors before staging live executions:
 1.  **Ideal Pathway Verification:** Tested with complete high-tier profile parameters resulting in immediate validation passes.
 2.  **Deficit Assessment Verification:** Tested with intentional GPA criteria deficits. The agent calculated precise parameter mismatches and cleanly suggested lower-tier pathways without data errors.
+
+## 🎥 System Walkthrough & Loop Test Evidence
+
+For a comprehensive end-to-end evaluation of the agent architecture, dynamic tool execution loops, and automated error-trapping guardrails under concurrency loads, watch the official walkthrough:
+
+👉 **[Watch Live Walkthrough: Agent Configuration & Loop Test Evidence](https://drive.google.com/file/d/1q4DclW3f-SOeQ6AVT9WiDug0IKxhP4DW/view)**
+
+
+
+## Contact & Connect
+* **Portfolio Showcase:** [syeda-munazza-bukhari-portfolio.netlify.app](https://syeda-munazza-bukhari-portfolio.netlify.app/)
+* **GitHub Center:** [github.com/SyedaMun](https://github.com/SyedaMun)
+
+
+With regards,  
+**Syeda Munazza Bukhari**  
+*Backend & AI Engineer*
